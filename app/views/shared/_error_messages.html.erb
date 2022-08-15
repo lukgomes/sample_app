@@ -1,3 +1,4 @@
+<% puts @user.errors.any? %>
 <% if @user.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
@@ -5,7 +6,7 @@
     </div>
     <ul>
       <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li><% msg %></li>
       <% end %>
     </ul>
   </div>
